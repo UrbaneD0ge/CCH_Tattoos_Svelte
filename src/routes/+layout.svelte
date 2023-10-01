@@ -14,10 +14,6 @@
       <li><a href="/about">About CCH</a></li>
     {/if}
 
-    {#if $page.route.id !== '/login/google'}
-      <li><a href="/login/google">Login with Google</a></li>
-    {/if}
-
     {#if $page.route.id !== '/contact'}
       <li><a href="/contact">Contact CCH</a></li>
     {/if}

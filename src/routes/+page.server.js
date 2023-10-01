@@ -1,8 +1,6 @@
 import { Reservations } from '$db/reservation.js';
 import { redirect } from '@sveltejs/kit';
 
-console.log('Reservations route');
-
 export const actions = {
   default: async ({ request }) => {
 
