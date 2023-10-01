@@ -12,9 +12,9 @@
       />
     {/if}
     <span class="signedInText">
-      <h1>Authorized!</h1>
+      <h1>Authenticated, but not Authorized!</h1>
       <small>Signed in as</small><br />
-      <strong>{$page.data.session.user?.name ?? 'User'}</strong>
+      <strong>{$page.data.session.user?.email ?? 'User'}</strong>
     </span>
     <button on:click={() => signOut()} class="button">Sign out</button>
   {:else}
