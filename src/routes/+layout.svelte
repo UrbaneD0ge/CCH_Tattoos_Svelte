@@ -1,6 +1,5 @@
 <script>
   import { page } from '$app/stores';
-  import Reserve from '$lib/components/Reserve.svelte';
 </script>
 
 <header>

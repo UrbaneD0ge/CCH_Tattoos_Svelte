@@ -15,8 +15,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@auth/core": "^0.16.0",
-		"@auth/sveltekit": "^0.3.7",
 		"mongodb": "^6.1.0",
 		"mongoose": "^7.5.3"
 	}
