@@ -6,14 +6,16 @@
 </script>
 
 {#if $page.data.session?.user}
-  <p>Signed in as {$page.data.session.user.email}</p>
-  <button on:click={signOut}>Sign out</button>
-  <img
-    height="50"
-    alt="your avatar"
-    src={$page.data.session.user.image}
-    style="clip-path: circle(50%);"
-  />
+  <div class="authStatus">
+    <p>Signed in as {$page.data.session.user.email}</p>
+    <img
+      height="50"
+      alt="your avatar"
+      src={$page.data.session.user.image}
+      style="clip-path: circle(50%);"
+    />
+    <button on:click={signOut}>Sign out</button>
+  </div>
 {:else}
   <p>Not signed in.</p>
   <button on:click={() => signIn('google')}>Sign in</button>
@@ -26,28 +28,31 @@
       <th>Email</th>
       <th>Phone</th>
       <th>Date</th>
-      <th>File</th>
       <th>Message</th>
+      <th>Delete</th>
     </tr>
-    {#each Reservations as reservation}
+    {#each Reservations as reservation (reservation._id)}
       <tr>
         <td>
           {reservation.name}
         </td>
         <td>
-          {reservation.email}
+          <a href="mailto:{reservation.email}">{reservation.email}</a>
         </td>
         <td>
-          {reservation.phone}
+          <a href="tel:{reservation.phone}">{reservation.phone}</a>
         </td>
         <td>
           {reservation.date.toLocaleString()}
         </td>
         <td>
-          <a href={reservation.file}>{reservation.file ? '🖼' : '-'}</a>
+          {reservation.message || '-'}
         </td>
         <td>
-          {reservation.message || '-'}
+          <form action="?/delete" method="post">
+            <input type="hidden" name="_id" value={reservation._id} />
+            <button id="DELETE">DELETE</button>
+          </form>
         </td>
       </tr>
     {/each}
@@ -68,5 +73,10 @@
 
   tr:nth-child(even) {
     background-color: #f2f2f2;
+  }
+
+  .authStatus {
+    display: inline-flex;
+    align-items: center;
   }
 </style>

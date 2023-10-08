@@ -3,7 +3,7 @@
   import Reserve from '$lib/components/Reserve.svelte';
 </script>
 
-<nav>
+<header>
   <a href="/"><h1>Yattoos</h1></a>
   <ul>
     {#if $page.route.id !== '/yattoos'}
@@ -23,12 +23,24 @@
     {/if}
   </ul>
   <Reserve />
-</nav>
+</header>
 
 <slot />
 
 <style>
-  nav {
+  @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+  :global(html, body) {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  :global(*) {
+    font-family: 'Sriracha', sans-serif;
+  }
+
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,99 +55,27 @@
     color: #fff;
   }
 
-  nav ul {
+  header ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  nav ul li {
+  header ul li {
     margin-left: 1rem;
   }
 
-  nav ul li:first-child {
+  header ul li:first-child {
     margin-left: 0;
   }
 
-  nav ul li a {
+  header ul li a {
     color: #fff;
     text-decoration: none;
   }
 
-  nav ul li a:hover {
+  header ul li a:hover {
     text-decoration: underline;
   }
-
-  /* nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  }
-
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-
-  nav ul li a.active:hover {
-    text-decoration: none;
-  } */
 </style>
