@@ -22,7 +22,7 @@
       <li><a href="/reservations">View Reservations</a></li>
     {/if}
   </ul>
-  <Reserve />
+  <!-- <Reserve /> -->
 </header>
 
 <slot />
@@ -40,6 +40,11 @@
     font-family: 'Sriracha', sans-serif;
   }
 
+  :global(a) {
+    text-decoration: none;
+    color: #4039b9;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -50,8 +55,8 @@
   }
 
   a h1 {
-    margin: 0;
-    text-decoration: none none none none !important;
+    margin-right: 10px;
+    text-decoration: none !important;
     color: #fff;
   }
 

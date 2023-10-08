@@ -1,7 +1,10 @@
-<body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-  <h1>Contact</h1>
-  <p>Call us at 1-800-555-5555</p>
-</body>
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe
+  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ36__KNIPXGs2a9w8Qv_yxHAbfRA0dldel4QE87eucOwo7bNx5VwLIyBZf2xU9mN8xaKcmPUXAG?gv=true"
+  title="Yattoos by CCH"
+  style="border: 0"
+  width="100%"
+  height="900"
+  frameborder="0"
+/>
+<!-- end Google Calendar Appointment Scheduling -->
