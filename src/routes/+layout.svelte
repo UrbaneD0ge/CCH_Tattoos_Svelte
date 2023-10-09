@@ -96,6 +96,23 @@
     padding: 0 1rem;
   }
 
+  @media (max-width: 600px) {
+    /* header {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    } */
+
+    header ul {
+      margin-top: 1rem;
+    }
+
+    #container {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
