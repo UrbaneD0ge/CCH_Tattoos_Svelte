@@ -13,18 +13,16 @@
       <li><a href="/about">About CCH</a></li>
     {/if}
 
-    {#if $page.route.id !== '/contact'}
-      <li><a href="/contact">Contact CCH</a></li>
-    {/if}
-
     {#if $page.route.id !== '/reservations'}
-      <li><a href="/reservations">View Reservations</a></li>
+      <li><a href="/reservations">Book It!</a></li>
     {/if}
   </ul>
   <!-- <Reserve /> -->
 </header>
 
-<slot />
+<div id="container">
+  <slot />
+</div>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
@@ -44,6 +42,10 @@
     color: #4039b9;
   }
 
+  :global(iframe) {
+    height: 82svh;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -51,6 +53,12 @@
     padding: 1rem;
     background-color: #000;
     color: #fff;
+    height: 8vh;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
   }
 
   a h1 {
@@ -81,5 +89,27 @@
 
   header ul li a:hover {
     text-decoration: underline;
+  }
+
+  #container {
+    margin: 0 2rem;
+    padding: 0 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: whitesmoke;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    background-color: whitesmoke;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
   }
 </style>
