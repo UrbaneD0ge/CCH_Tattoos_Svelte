@@ -5,16 +5,16 @@
 <header>
   <a href="/"><h1>Yattoos</h1></a>
   <ul>
-    {#if $page.route.id !== '/yattoos'}
-      <li><a href="/yattoos">Yattoo Portfolio</a></li>
-    {/if}
+    <!-- {#if $page.route.id !== '/merch'}
+      <li><a href="/merch">Merch</a></li>
+    {/if} -->
 
     {#if $page.route.id !== '/about'}
       <li><a href="/about">About CCH</a></li>
     {/if}
 
-    {#if $page.route.id !== '/reservations'}
-      <li><a href="/reservations">Book It!</a></li>
+    {#if $page.route.id !== '/book'}
+      <li id="bookIt"><a href="/book">Book Now!</a></li>
     {/if}
   </ul>
   <!-- <Reserve /> -->
@@ -39,11 +39,11 @@
 
   :global(a) {
     text-decoration: none;
-    color: #4039b9;
   }
 
   :global(iframe) {
-    height: 82svh;
+    height: 86svh;
+    margin-block: auto;
   }
 
   header {
@@ -85,10 +85,17 @@
   header ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
   }
 
   header ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: solid 3px #443cd0;
+    /* color: #4039b9 !important; */
+  }
+
+  #bookIt:hover {
+    color: #4039b9 !important;
   }
 
   #container {
